@@ -1,0 +1,31 @@
+@mixin btn-styles($bg, $width, $border, $radius, $height, $font){
+    padding: 10px 15px;
+    border: 1px solid black;
+    background-color: $bg;
+    color: black;
+    width: $width;
+    height: $height;
+    font-size: $font;
+    border-radius: $radius;
+    border-style: $border;
+    @if($bg == red or $bg == green or $bg == blue or $bg == black){
+        color: white;
+    }
+    @if($bg == yellow or $bg == white or $bg == orange or $bg == aqua){
+        color: white;
+    }
+}
+
+
+.btn1{
+    @include btn-styles(transparent, 200px, dashed, 40px, 70px, 20px)
+}
+.btn2{
+    @include btn-styles(red, 200px, dotted, 50px, 40px, 15px)
+}
+.btn3{
+    @include btn-styles(yellow, 200px, solid, 20px, 40px, 10px)
+}
+.btn4{
+    @include btn-styles(green, 200px, dashed, 40px, 70px, 50px)
+}
