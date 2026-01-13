@@ -1,0 +1,246 @@
+$displays: flex, none, grid, block, inline, inline-block;
+$justifies: end, start, center, space-between, space-evenly, space-around;
+$directions: row, column, row-reverse;
+@each $display in $displays{
+    .#{$display}{
+        display: $display;
+    }
+}
+@each $justify in $justifies{
+    .#{$justify}{
+        justify-content: $justify;
+    }
+}
+@each $direction in $directions{
+    .#{$direction}{
+        flex-direction: $direction;
+    }
+}
+
+@mixin btn-styles($w, $h){
+    height: $h;
+    width: $w;
+    font-size: 16px;
+    color: white;
+    border-radius: 30px;
+    font-family: sans-serif;
+    background: #4058FF;
+    border: none;
+}
+
+@for $i from 1 through 1000{
+    .w-#{$i}{
+        width: $i * 1px;
+    }
+    .fw-#{$i}{
+        font-weight: $i;
+    }
+    .wf-#{$i}{
+        width: $i * 1%;
+    }
+    .h-#{$i}{
+        height: $i * 1px;
+    }
+    .hvh-#{$i}{
+        height: $i * 1vh;
+    }
+    .hf-#{$i}{
+        height: $i * 1%;
+    }
+    .ml-#{$i}{
+        margin-left: $i * 1px;
+    }
+    .mt-#{$i}{
+        margin-top: $i * 1px;
+    }
+    .mr-#{$i}{
+        margin-right: $i * 1px;
+    }
+    .mb-#{$i}{
+        margin-bottom: $i * 1px;
+    }
+    .pl-#{$i}{
+        padding-left: $i * 1px;
+    }
+    .pr-#{$i}{
+        padding-right: $i * 1px;
+    }
+    .pt-#{$i}{
+        padding-top: $i * 1px;
+    }
+    .pb-#{$i}{
+        padding-bottom: $i * 1px;
+    }
+    .font-#{$i}{
+        font-size: $i * 1px;
+    }
+    .radius-#{$i}{
+        border-radius: $i * 1px;
+    }
+}
+$colors:(
+    surkh: red,
+    zard: yellow,
+    sabz: green,
+    sabzz: #2EB897,
+    kabut: blue,
+    osmoni: skyblue,
+    negr: black,
+    safed: white,
+    seriy: lightgrey,
+    seriytar: grey,
+    nimseriy: #969EB1,
+    chirnil: #702A8A,
+    ozon: #4058FF,
+    p: #6C778E,
+    pp: #707070,
+    gren: #2EB897
+);
+@each $key, $value in $colors{
+    .rang-#{$key}{
+        color: $value;
+    };
+};
+
+
+*{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.all{
+    height: auto;
+    width: 100%;
+}
+
+header{
+    border-bottom: 2px solid;
+    align-items: center;
+    button{
+        border: none;
+    }
+}
+
+.content{
+    align-items: center;
+}
+
+.content0{
+    .box{
+        background-color: #4058FF;
+        align-items: center;
+        border-radius: 20px;
+    }
+}
+
+.content1{
+    background-color: #F1F5FF80;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.content2{
+    .box{
+        background-color: #FFF4F580;
+        align-items: center;
+    }
+    .boxx{
+        background-color: #FFF6E480;
+        align-items: center;
+        img{
+            position: relative;
+            top: 130px;
+        }
+    }
+}
+
+.content3{
+    .box{
+        background-color: black;
+        align-items: center;
+        border-radius: 20px;
+    }
+    .boxx{
+        background-color: black;
+        align-items: center;
+        border-radius: 20px;
+    }
+}
+
+
+.content3{
+    background-color: black;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.content4{
+    .box{
+        background-color: #F1F5FF80;
+        align-items: center;
+    }
+    .boxx{
+        background-color: #F1F5FF80;
+        align-items: center;
+    }
+}
+
+
+.content5{
+    background-color: #F1F5FF80;
+    margin-top: 50px;
+    align-items: center;
+    .box{
+        height: 80%;
+        width: 25%;
+        border-radius: 10px;
+    }
+    .boxx{
+        height: 80%;
+        width: 25%;
+        background-color: #4058FF;
+        border-radius: 10px;
+    }
+    .boxxx{
+        height: 80%;
+        width: 25%;
+        background-color: #4058FF;
+        border-radius: 10px;
+    }
+}
+
+.content6{
+    button{
+        border: none;
+    }
+}
+
+.content7{
+    height: 40vh;
+    width: 90%;
+    background-color: #4058FF;
+    margin-left: 75px;
+    border-radius: 20px;
+    align-items: center;
+    .btn{
+        height: 40px;
+        width: 170px;
+        background-color: white;
+        border: none;
+        border-radius: 20px;
+        font-size: 17px;
+        font-weight: 700;
+        color: #4058FF;
+        border-radius: 5px solid;
+    }
+}
+
+footer{
+    height: 30vh;
+    p{
+        margin-top: 15px;
+    }
+    .col{
+        margin-top: 50px;
+    }
+}
